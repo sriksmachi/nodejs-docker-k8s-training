@@ -50,7 +50,7 @@ kubectl create -f .\mysql-service.yml
 
 -- grab IP
 kubectl get svc
-
+```
 ### Database preparation
 Connect from MySQL Workbench or any command line tool and run the below query
 
