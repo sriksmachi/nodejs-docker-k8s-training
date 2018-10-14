@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nodewebapp
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: nodewebapp
+    spec:
+      containers:
+      - name:  nodewebapp
+        image:  vishwanathsrikanth/node-web-app
+        ports:
+          - name: http-port
+            containerPort: 3000
+        env:
+          - name:  Host
+            value:  13.67.51.97
+          - name: Password
+            value: password

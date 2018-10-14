@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-  host: 'localhost',
+  host: process.env.Host,
   user: 'root',
-  password: 'password',
+  password: process.env.Password,
   database: 'authorsdb'
 });
 
@@ -26,5 +26,6 @@ router.get('/', function (req, res, next) {
   });
 });
 
+console.log('Host: ' + process.env.Host + 'password: ' + process.env.password);
 connection.end();
 module.exports = router;
