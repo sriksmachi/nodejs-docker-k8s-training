@@ -13,26 +13,21 @@ az login --use-device-code
 az group create -l westus -n contoso
 az aks create -n myaks -g contoso --node-count 2 -s Standard_A1
 ```
-#### Create cluster with RBAC enabled
+#### Create cluster with RBAC enabled (Optional)
 Please follow the steps in the below link and update the values accordingly.
 https://docs.microsoft.com/en-us/azure/aks/aad-integration
 
-az aks create -g contoso -n myaks \
-  --generate-ssh-keys \
-  --aad-server-app-id c9c2c195-d7fd-4564-8e91-dc39437d2b28 \
-  --aad-server-app-secret jtw4RAPVL+zDm+oCxCiKi+Ngx3Mylctr5QoIjWwWo5g= \
-  --aad-client-app-id e7946b29-c83c-42fa-b163-eb89653f1f12 \
-  --aad-tenant-id 8f348a80-a372-4ace-a595-b2bd09210a68
+az aks create -g contoso -n myaks --generate-ssh-keys --aad-server-app-id c9c2c195-d7fd-4564-8e91-dc39437d2b28 --aad-server-app-secret jtw4RAPVL+zDm+oCxCiKi+Ngx3Mylctr5QoIjWwWo5g= --aad-client-app-id e7946b29-c83c-42fa-b163-eb89653f1f12 --aad-tenant-id 8f348a80-a372-4ace-a595-b2bd09210a68
 
 ### Connect with Kubectl
 
 ```
 az aks get-credentials -n myaks -g contoso 
 ```
-If the cluster is RBAC enabled run the below command
+If the cluster is RBAC enabled run the below command (Optional)
 az aks get-credentials -n myaks -g contoso --admin
 
-### Browse k8s dashboard
+### Browse k8s dashboard (Optional)
 PS: Follow the instructions from link below for enabling RBAC, this is mandatory for browsing kubernetes portal. 
 https://docs.microsoft.com/en-us/azure/aks/aad-integration
 ```
@@ -44,7 +39,7 @@ az aks browse -n myaks -g contoso
 az aks delete -n myaks -g contoso --yes
 ```
 
-## Minikube
+## Minikube (Optional)
 Run K8s locally using https://kubernetes.io/docs/setup/minikube/
 
 ## K8s deployment on AWS (needs a purchased/free domain with provision to configure DNS)
