@@ -17,6 +17,6 @@ spec:
             containerPort: 3000
         env:
           - name:  Host
-            value:  13.67.51.97
+            value:  13.67.71.182 ## IP of the mysql service
           - name: Password
             value: password
