@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodehelloworld
+  labels:
+    app: helloworld
+spec:
+  containers:
+  - name: k8s-demo
+    image: vishwanathsrikanth/nodejshelloworld
+    ports:
+    - name: nodejs-port
+      containerPort: 3030

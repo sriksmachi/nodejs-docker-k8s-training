@@ -1,0 +1,26 @@
+{
+  "name": "simplenodejsapp",
+  "version": "1.0.0",
+  "description": "Simple NodeJS app with Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishwanathsrikanth/nodejs-docker-k8s-training.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "srikantma@live.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishwanathsrikanth/nodejs-docker-k8s-training/issues"
+  },
+  "homepage": "https://github.com/vishwanathsrikanth/nodejs-docker-k8s-training#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

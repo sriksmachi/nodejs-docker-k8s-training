@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 
+    | #{title}
+
+  div
+   table.table.table-hover
+    thead
+      tr: th Authors
+    tbody
+      each author in authors
+        tr
+          td=author.Name
+          td=author.PageCount
+          td=author.BookName
+          td=author.PublishedYear
+
+
